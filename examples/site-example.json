@@ -1,0 +1,182 @@
+{
+  "name": "The example token on quantumorb.app",
+  "symbol": "GRUMPKIN",
+  "note": "The made-up token the home page uses for \"One scan, three answers\" and the operator map replay. Six wallets bought in one transaction, got tokens from one source or by direct transfer: one operator with 41% of float. Three fresh wallets entered together: a pack.",
+  "stage": "curve",
+  "floatTokens": 1000000000,
+  "reserveTokens": 559657791.6492243,
+  "liquidityUsd": 16156.800000000001,
+  "holders": [
+    {
+      "share": 0.12672079045417037,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.07113197513826496,
+      "kind": "transfer",
+      "virgin": true,
+      "sniper": true
+    },
+    {
+      "share": 0.06904329877012562,
+      "kind": "transfer",
+      "virgin": true
+    },
+    {
+      "share": 0.05571981167531381,
+      "kind": "buy",
+      "sniper": true
+    },
+    {
+      "share": 0.04768259698214471,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.04068675262494438,
+      "kind": "buy",
+      "sold": true,
+      "dev": true
+    },
+    {
+      "share": 0.03729706206715127,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.03644635125859142,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.025700533205797176,
+      "kind": "buy",
+      "virgin": true,
+      "sold": true
+    },
+    {
+      "share": 0.021215224496876784,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01912926058729168,
+      "kind": "buy"
+    },
+    {
+      "share": 0.0178187797758247,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.013487941211464249,
+      "kind": "buy"
+    },
+    {
+      "share": 0.009598082974135978,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.008570910110055976,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.006404815025053297,
+      "kind": "buy",
+      "sniper": true
+    },
+    {
+      "share": 0.005971492091044253,
+      "kind": "buy",
+      "virgin": true,
+      "sniper": true
+    },
+    {
+      "share": 0.004967335104785331,
+      "kind": "buy",
+      "virgin": true,
+      "sold": true
+    },
+    {
+      "share": 0.004095909098389707,
+      "kind": "buy"
+    },
+    {
+      "share": 0.0036342815325253685,
+      "kind": "buy"
+    }
+  ],
+  "links": [
+    {
+      "a": 0,
+      "b": 1,
+      "kind": "distributor",
+      "level": "proven"
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "kind": "direct",
+      "level": "proven"
+    },
+    {
+      "a": 0,
+      "b": 3,
+      "kind": "same_tx",
+      "level": "proven"
+    },
+    {
+      "a": 0,
+      "b": 4,
+      "kind": "same_tx",
+      "level": "proven"
+    },
+    {
+      "a": 0,
+      "b": 5,
+      "kind": "same_tx",
+      "level": "proven"
+    },
+    {
+      "a": 6,
+      "b": 7,
+      "kind": "pack",
+      "level": "pack"
+    },
+    {
+      "a": 6,
+      "b": 8,
+      "kind": "pack",
+      "level": "pack"
+    }
+  ],
+  "creator": {
+    "launched": 65,
+    "alive": 1
+  },
+  "slot0Share": 0.56,
+  "devShare": 0.171,
+  "traded": true,
+  "expect": {
+    "state": "ok",
+    "score": 12,
+    "band": "DANGER",
+    "parts": {
+      "operator": 0,
+      "virgin": 9.8,
+      "transfer": 0,
+      "sniper": 0.8,
+      "concentration": 1.7
+    },
+    "headline": "20 wallets → 13 operators, biggest holds 41.1% of float, could move price −67% if sold",
+    "gates": [
+      "biggest operator could move price −67% if sold (41.1% of float, 6 linked wallets)",
+      "14.0% of float was received by transfer, not bought",
+      "proven operator of 6 wallets holds 41.1% of float",
+      "pack of 3 wallets holds 9.9% of float"
+    ],
+    "scenarioDrop": 0.7451
+  }
+}

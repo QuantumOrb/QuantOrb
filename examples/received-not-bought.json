@@ -1,0 +1,108 @@
+{
+  "name": "Simulated · Nebula Cat",
+  "symbol": "NEBCAT",
+  "note": "A Raydium CPMM token outside pump.fun: three quarters of the float arrived by transfer from the deployer instead of being bought.",
+  "stage": "cpmm",
+  "floatTokens": 1000000000,
+  "reserveTokens": 351351351.3513514,
+  "liquidityUsd": 120000,
+  "holders": [
+    {
+      "share": 0.7432432432432432,
+      "kind": "transfer",
+      "sold": true,
+      "dev": true
+    },
+    {
+      "share": 0.015135135135135135,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01472972972972973,
+      "kind": "buy"
+    },
+    {
+      "share": 0.014324324324324324,
+      "kind": "buy"
+    },
+    {
+      "share": 0.013918918918918919,
+      "kind": "buy"
+    },
+    {
+      "share": 0.013513513513513514,
+      "kind": "buy"
+    },
+    {
+      "share": 0.013108108108108108,
+      "kind": "buy"
+    },
+    {
+      "share": 0.012702702702702703,
+      "kind": "buy"
+    },
+    {
+      "share": 0.012297297297297297,
+      "kind": "buy"
+    },
+    {
+      "share": 0.011891891891891892,
+      "kind": "buy"
+    },
+    {
+      "share": 0.011486486486486487,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01108108108108108,
+      "kind": "buy"
+    },
+    {
+      "share": 0.010675675675675676,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01027027027027027,
+      "kind": "buy"
+    },
+    {
+      "share": 0.009864864864864865,
+      "kind": "buy"
+    },
+    {
+      "share": 0.00945945945945946,
+      "kind": "buy"
+    },
+    {
+      "share": 0.009054054054054054,
+      "kind": "buy"
+    },
+    {
+      "share": 0.008648648648648649,
+      "kind": "buy"
+    },
+    {
+      "share": 0.008243243243243244,
+      "kind": "buy"
+    }
+  ],
+  "links": [],
+  "expect": {
+    "state": "ok",
+    "score": 35,
+    "band": "DANGER",
+    "parts": {
+      "operator": 0,
+      "virgin": 25,
+      "transfer": 0,
+      "sniper": 10,
+      "concentration": 0
+    },
+    "headline": "19 wallets → 19 operators, biggest holds 74.3% of float, could move price −90% if sold",
+    "gates": [
+      "74.3% of float was received by transfer, not bought",
+      "one holder could move price −90% (thin liquidity)"
+    ],
+    "scenarioDrop": 0.897
+  }
+}

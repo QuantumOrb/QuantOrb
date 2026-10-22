@@ -1,0 +1,108 @@
+{
+  "name": "Simulated · Lux Bit",
+  "symbol": "LUXBIT",
+  "note": "A graduated token on PumpSwap held by many independent wallets with trading history. No links, no fresh wallets.",
+  "stage": "pumpswap",
+  "floatTokens": 1000000000,
+  "reserveTokens": 327731420.4565557,
+  "liquidityUsd": 21650.95,
+  "holders": [
+    {
+      "share": 0.06344628155530288,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06255591202459483,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06200260310972122,
+      "kind": "buy"
+    },
+    {
+      "share": 0.05951389249172257,
+      "kind": "buy"
+    },
+    {
+      "share": 0.04300075040912318,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.041326457183316866,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.03761467496105261,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.03710443528771475,
+      "kind": "buy"
+    },
+    {
+      "share": 0.0365282591618104,
+      "kind": "buy"
+    },
+    {
+      "share": 0.03561767962768038,
+      "kind": "buy"
+    },
+    {
+      "share": 0.03193545135533768,
+      "kind": "buy"
+    },
+    {
+      "share": 0.029253109648392898,
+      "kind": "buy"
+    },
+    {
+      "share": 0.025231704798351906,
+      "kind": "buy"
+    },
+    {
+      "share": 0.024876119249149318,
+      "kind": "buy"
+    },
+    {
+      "share": 0.024352279908437528,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.023232049560230547,
+      "kind": "buy"
+    },
+    {
+      "share": 0.022336592872511236,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.022025802579761233,
+      "kind": "buy"
+    },
+    {
+      "share": 0.018564738104139302,
+      "kind": "buy"
+    }
+  ],
+  "links": [],
+  "expect": {
+    "state": "ok",
+    "score": 76,
+    "band": "OK",
+    "parts": {
+      "operator": 21.1,
+      "virgin": 25,
+      "transfer": 20,
+      "sniper": 10,
+      "concentration": 0
+    },
+    "headline": "19 wallets → 19 operators, biggest holds 6.3% of float, could move price −30% if sold",
+    "gates": [],
+    "scenarioDrop": null
+  }
+}

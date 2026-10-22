@@ -1,0 +1,111 @@
+{
+  "name": "Made up · a partial scan",
+  "note": "Three of the top wallets could not be read within the time budget. They are marked unread and never counted as evidence, and with three or more unread the verdict is capped at RISKY.",
+  "stage": "curve",
+  "floatTokens": 1000000000,
+  "reserveTokens": 1100000000,
+  "liquidityUsd": 12000,
+  "holders": [
+    {
+      "share": 0.06,
+      "kind": "buy"
+    },
+    {
+      "share": 0.05,
+      "kind": "buy"
+    },
+    {
+      "share": 0.045,
+      "kind": "buy",
+      "unread": true
+    },
+    {
+      "share": 0.04,
+      "kind": "buy"
+    },
+    {
+      "share": 0.035,
+      "kind": "buy"
+    },
+    {
+      "share": 0.03,
+      "kind": "buy",
+      "unread": true
+    },
+    {
+      "share": 0.028,
+      "kind": "buy"
+    },
+    {
+      "share": 0.025,
+      "kind": "buy"
+    },
+    {
+      "share": 0.022,
+      "kind": "buy"
+    },
+    {
+      "share": 0.02,
+      "kind": "buy",
+      "unread": true
+    },
+    {
+      "share": 0.018,
+      "kind": "buy"
+    },
+    {
+      "share": 0.016,
+      "kind": "buy"
+    },
+    {
+      "share": 0.014,
+      "kind": "buy"
+    },
+    {
+      "share": 0.012,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01,
+      "kind": "buy"
+    },
+    {
+      "share": 0.009,
+      "kind": "buy"
+    },
+    {
+      "share": 0.008,
+      "kind": "buy"
+    },
+    {
+      "share": 0.007,
+      "kind": "buy"
+    },
+    {
+      "share": 0.006,
+      "kind": "buy"
+    },
+    {
+      "share": 0.005,
+      "kind": "buy"
+    }
+  ],
+  "links": [],
+  "expect": {
+    "state": "partial",
+    "score": 59,
+    "band": "RISKY",
+    "parts": {
+      "operator": 34.9,
+      "virgin": 25,
+      "transfer": 20,
+      "sniper": 10,
+      "concentration": 5.3
+    },
+    "headline": "20 wallets → 20 operators, biggest holds 6.0% of float, could move price −10% if sold",
+    "gates": [
+      "3 of 20 wallets could not be read in time · verdict capped at RISKY"
+    ],
+    "scenarioDrop": null
+  }
+}

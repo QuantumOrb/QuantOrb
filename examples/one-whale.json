@@ -1,0 +1,108 @@
+{
+  "name": "Made up · one honest whale",
+  "note": "No links, no fresh wallets, but one independent holder with a long history holds 31% of float in a thin pool. Selling would move the price by more than half: the verdict is capped at RISKY, not forced to DANGER.",
+  "stage": "pumpswap",
+  "floatTokens": 1000000000,
+  "reserveTokens": 240000000,
+  "liquidityUsd": 42000,
+  "holders": [
+    {
+      "share": 0.31,
+      "kind": "buy"
+    },
+    {
+      "share": 0.03,
+      "kind": "buy"
+    },
+    {
+      "share": 0.025,
+      "kind": "buy"
+    },
+    {
+      "share": 0.022,
+      "kind": "buy"
+    },
+    {
+      "share": 0.02,
+      "kind": "buy"
+    },
+    {
+      "share": 0.018,
+      "kind": "buy"
+    },
+    {
+      "share": 0.016,
+      "kind": "buy"
+    },
+    {
+      "share": 0.015,
+      "kind": "buy"
+    },
+    {
+      "share": 0.014,
+      "kind": "buy"
+    },
+    {
+      "share": 0.013,
+      "kind": "buy"
+    },
+    {
+      "share": 0.012,
+      "kind": "buy"
+    },
+    {
+      "share": 0.011,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01,
+      "kind": "buy"
+    },
+    {
+      "share": 0.009,
+      "kind": "buy"
+    },
+    {
+      "share": 0.009,
+      "kind": "buy"
+    },
+    {
+      "share": 0.008,
+      "kind": "buy"
+    },
+    {
+      "share": 0.008,
+      "kind": "buy"
+    },
+    {
+      "share": 0.007,
+      "kind": "buy"
+    },
+    {
+      "share": 0.007,
+      "kind": "buy"
+    }
+  ],
+  "links": [],
+  "expect": {
+    "state": "ok",
+    "score": 58,
+    "band": "RISKY",
+    "parts": {
+      "operator": 0,
+      "virgin": 25,
+      "transfer": 20,
+      "sniper": 10,
+      "concentration": 2.8
+    },
+    "headline": "20 wallets → 20 operators, biggest holds 31.0% of float, could move price −81% if sold",
+    "gates": [
+      "one holder could move price −81% (thin liquidity)"
+    ],
+    "scenarioDrop": null
+  }
+}
