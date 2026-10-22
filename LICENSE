@@ -1,17 +1,19 @@
 QuantumOrb
 Copyright (c) 2026 QuantumOrb. All rights reserved.
 
-This repository - its text and images - is published so that it can be read.
+This repository - its text, images, code, tests and examples - is published so that it can be read and
+so that anyone can check how QuantumOrb turns a scan into a verdict.
 
-You may view this repository and link to it.
+You may view this repository, link to it, and run the code in rules/, test/ and examples/ to check
+QuantumOrb's verdicts.
 
 You may not, without prior written permission from the copyright holder:
-  - copy, modify, merge, publish, distribute, sublicense or sell any part of this repository or of the
-    QuantumOrb software it describes;
+  - copy, modify, merge, publish, distribute, sublicense or sell any part of this repository, or use
+    the code in it in another product or service;
   - use the screenshots, names or brand of QuantumOrb in another product or service.
 
-The QuantumOrb software itself (the site, the scanner, the Telegram bot and their infrastructure) is
-not published in this repository and is not licensed by it.
+The rest of the QuantumOrb software (the scanner, the site, the Telegram bot and their infrastructure)
+is not published in this repository and is not licensed by it.
 
 THIS REPOSITORY IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL
 THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF
