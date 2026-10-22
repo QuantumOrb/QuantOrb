@@ -1,0 +1,187 @@
+{
+  "name": "Simulated · Grumpy Pumpkin",
+  "symbol": "GRUMPKIN",
+  "note": "A launch on the bonding curve: three wallets bought in the launch slot in one transaction, a distributor fed fresh wallets, one holder passed tokens to another, and four fresh wallets entered together.",
+  "stage": "curve",
+  "floatTokens": 1000000000,
+  "reserveTokens": 924134139.3159144,
+  "liquidityUsd": 9738.85,
+  "holders": [
+    {
+      "share": 0.12186478312111232,
+      "kind": "buy",
+      "virgin": true,
+      "sniper": true,
+      "bundle": true
+    },
+    {
+      "share": 0.09764204502770246,
+      "kind": "buy",
+      "virgin": true,
+      "sniper": true,
+      "bundle": true
+    },
+    {
+      "share": 0.09005645169160247,
+      "kind": "buy",
+      "sniper": true
+    },
+    {
+      "share": 0.0830611820034577,
+      "kind": "buy",
+      "virgin": true,
+      "sniper": true,
+      "bundle": true
+    },
+    {
+      "share": 0.07400515920445687,
+      "kind": "buy",
+      "bundle": true,
+      "dev": true
+    },
+    {
+      "share": 0.06081220879624052,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.05318852081303528,
+      "kind": "transfer",
+      "virgin": true
+    },
+    {
+      "share": 0.04187987160972037,
+      "kind": "buy",
+      "sniper": true,
+      "sold": true
+    },
+    {
+      "share": 0.038039299977974186,
+      "kind": "buy",
+      "sold": true
+    },
+    {
+      "share": 0.03723196456912506,
+      "kind": "transfer",
+      "virgin": true
+    },
+    {
+      "share": 0.026062375198388794,
+      "kind": "transfer",
+      "virgin": true
+    },
+    {
+      "share": 0.02550356883184987,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.02550019890996398,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.025427965366934455,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.025359533318647067,
+      "kind": "transfer",
+      "virgin": true
+    },
+    {
+      "share": 0.02526668863099045,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.02334777772397309,
+      "kind": "buy"
+    },
+    {
+      "share": 0.022222974953366736,
+      "kind": "buy"
+    },
+    {
+      "share": 0.02084723316370311,
+      "kind": "buy"
+    }
+  ],
+  "links": [
+    {
+      "a": 0,
+      "b": 1,
+      "kind": "same_tx",
+      "level": "proven"
+    },
+    {
+      "a": 0,
+      "b": 3,
+      "kind": "same_tx",
+      "level": "proven"
+    },
+    {
+      "a": 5,
+      "b": 6,
+      "kind": "direct",
+      "level": "proven"
+    },
+    {
+      "a": 5,
+      "b": 9,
+      "kind": "direct",
+      "level": "proven"
+    },
+    {
+      "a": 5,
+      "b": 10,
+      "kind": "direct",
+      "level": "proven"
+    },
+    {
+      "a": 8,
+      "b": 14,
+      "kind": "direct",
+      "level": "proven"
+    },
+    {
+      "a": 11,
+      "b": 15,
+      "kind": "pack",
+      "level": "pack"
+    },
+    {
+      "a": 11,
+      "b": 12,
+      "kind": "pack",
+      "level": "pack"
+    },
+    {
+      "a": 11,
+      "b": 13,
+      "kind": "pack",
+      "level": "pack"
+    }
+  ],
+  "expect": {
+    "state": "ok",
+    "score": 18,
+    "band": "DANGER",
+    "parts": {
+      "operator": 11.7,
+      "virgin": 6.7,
+      "transfer": 0,
+      "sniper": 0,
+      "concentration": 0
+    },
+    "headline": "19 wallets → 10 operators, biggest holds 30.3% of float, could move price −43% if sold",
+    "gates": [
+      "14.2% of float was received by transfer, not bought",
+      "proven operator of 3 wallets holds 30.3% of float",
+      "proven operator of 4 wallets holds 17.7% of float",
+      "pack of 4 wallets holds 10.2% of float"
+    ],
+    "scenarioDrop": 0.6837
+  }
+}

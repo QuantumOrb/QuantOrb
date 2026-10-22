@@ -1,0 +1,21 @@
+{
+  "name": "Simulated · Giga Chad",
+  "symbol": "GIGACHAD",
+  "note": "Months old, deep liquidity, big market cap: the top holders are exchanges and pools, so holder patterns stop meaning what they mean on a fresh launch.",
+  "stage": "meteora",
+  "market": {
+    "ageDays": 420,
+    "liquidityUsd": 2400000,
+    "mcap": 42000000
+  },
+  "holders": [],
+  "expect": {
+    "state": "too_established",
+    "score": null,
+    "band": "ESTABLISHED",
+    "parts": null,
+    "headline": "Too established for a holder scan",
+    "gates": [],
+    "scenarioDrop": null
+  }
+}

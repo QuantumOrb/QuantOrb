@@ -1,0 +1,48 @@
+{
+  "name": "Simulated · Tiny Pup",
+  "symbol": "TINYPUP",
+  "note": "Minutes old, with only six wallets outside the curve: one buy would change everything, so there is no score yet.",
+  "stage": "curve",
+  "holders": [
+    {
+      "share": 0.18219903312535374,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.17864970131122201,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.17520308327950324,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.17185525366269572,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.16860247283626817,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.12349045578495715,
+      "dev": true,
+      "unread": true,
+      "kind": "buy"
+    }
+  ],
+  "expect": {
+    "state": "too_early",
+    "score": null,
+    "band": "EARLY",
+    "parts": null,
+    "headline": "6 wallets hold this token outside the curve",
+    "gates": [],
+    "scenarioDrop": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "name": "Made up · a clean distribution",
+  "note": "Twenty independent wallets, all with trading history, none linked, none fresh, nobody got tokens by transfer. The top 20 hold 28% of float together.",
+  "stage": "pumpswap",
+  "floatTokens": 1000000000,
+  "reserveTokens": 220000000,
+  "liquidityUsd": 185000,
+  "holders": [
+    {
+      "share": 0.024,
+      "kind": "buy"
+    },
+    {
+      "share": 0.021,
+      "kind": "buy"
+    },
+    {
+      "share": 0.019,
+      "kind": "buy"
+    },
+    {
+      "share": 0.018,
+      "kind": "buy"
+    },
+    {
+      "share": 0.017,
+      "kind": "buy"
+    },
+    {
+      "share": 0.016,
+      "kind": "buy"
+    },
+    {
+      "share": 0.015,
+      "kind": "buy"
+    },
+    {
+      "share": 0.015,
+      "kind": "buy"
+    },
+    {
+      "share": 0.014,
+      "kind": "buy"
+    },
+    {
+      "share": 0.014,
+      "kind": "buy"
+    },
+    {
+      "share": 0.013,
+      "kind": "buy"
+    },
+    {
+      "share": 0.013,
+      "kind": "buy"
+    },
+    {
+      "share": 0.012,
+      "kind": "buy"
+    },
+    {
+      "share": 0.012,
+      "kind": "buy"
+    },
+    {
+      "share": 0.011,
+      "kind": "buy"
+    },
+    {
+      "share": 0.011,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01,
+      "kind": "buy"
+    },
+    {
+      "share": 0.01,
+      "kind": "buy"
+    },
+    {
+      "share": 0.009,
+      "kind": "buy"
+    },
+    {
+      "share": 0.006,
+      "kind": "buy"
+    }
+  ],
+  "links": [],
+  "expect": {
+    "state": "ok",
+    "score": 93,
+    "band": "CLEAN",
+    "parts": {
+      "operator": 28.9,
+      "virgin": 25,
+      "transfer": 20,
+      "sniper": 10,
+      "concentration": 9.3
+    },
+    "headline": "20 wallets → 20 operators, biggest holds 2.4% of float, could move price −19% if sold",
+    "gates": [],
+    "scenarioDrop": null
+  }
+}
