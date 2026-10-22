@@ -1,0 +1,40 @@
+name: Bug report
+description: Something on quantumorb.app looks wrong or does not work
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. A security problem? Please do not describe it here: see SECURITY.md.
+        QuantumOrb never asks for keys, seed phrases or funds.
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: The page, or the token address you scanned
+      placeholder: https://quantumorb.app/#t-…
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Scan and score
+        - Token page (owner powers, liquidity, first buyers, pressure)
+        - Radar and Guard
+        - The open rules in this repository
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Chrome 130 on Windows, Safari on iPhone…
