@@ -63,6 +63,37 @@ published on the site: [quantumorb.app/#how](https://quantumorb.app/#how).
 
 <p align="center"><img src="assets/screens/rules.png" alt="How the score is built" width="100%"></p>
 
+## Check the score yourself
+
+The code that turns a scan into a verdict is open: [`rules/`](rules). The score, operators, red flags,
+caps, the sell scenario and Guard's checks are the server's own functions, not a rewrite. The examples
+carry results the server itself produced, and the tests hold the open code to them.
+
+```bash
+git clone https://github.com/QunatOrb/QuantOrb && cd QuantOrb
+npm test                                        # Node 18+, no dependencies
+node rules/cli.js examples/site-example.json    # the example token on the home page
+```
+
+```
+The example token on quantumorb.app · $GRUMPKIN
+20 wallets → 13 operators, biggest holds 41.1% of float, could move price −67% if sold
+
+score 12 / 100 · DANGER
+  Biggest operator        0.0 / 35
+  Fresh wallets           9.8 / 25
+  Received, not bought    0.0 / 20
+  Unsold snipers          0.8 / 10
+  Top-20 share            1.7 / 10
+RED FLAG · biggest operator could move price −67% if sold (41.1% of float, 6 linked wallets)
+RED FLAG · 14.0% of float was received by transfer, not bought
+CAP · proven operator of 6 wallets holds 41.1% of float
+CAP · pack of 3 wallets holds 9.9% of float
+SCENARIO · if the linked, fresh and transferred wallets sold their 54.9% of float into today's liquidity, the price would fall about 75%
+```
+
+Rule by rule: [`docs/scoring.md`](docs/scoring.md) · [`docs/guard.md`](docs/guard.md).
+
 ## Radar and Guard
 
 New pump.fun launches appear on the Radar seconds after they go live. Set filters for market cap,
@@ -130,6 +161,21 @@ figures and the descriptions are hidden until it opens.</sub>
 
 <p align="center"><img src="assets/screens/mobile.png" alt="QuantumOrb on a phone" width="70%"></p>
 
+## What is in this repository
+
+| Folder | |
+|---|---|
+| [`rules/`](rules) | The open rules: score, operators, Guard's checks, and a command that prints a verdict |
+| [`examples/`](examples) | Scan inputs with the verdict each must get: the site's example token, scans the server made, one file per rule |
+| [`test/`](test) | `npm test`: every rule at its edges, and the examples against the server's results |
+| [`docs/`](docs) | How QuantumOrb fits together, the score rule by rule, Guard |
+| [`assets/`](assets) | The banner and the screens above |
+| [`.github/`](.github) | Issue templates |
+
+What stays closed: reading the chain (holders, entries, links between wallets), the launch stream, the
+site, the API and the bot. [`docs/architecture.md`](docs/architecture.md) shows where the line is.
+What changed and when: [`CHANGELOG.md`](CHANGELOG.md).
+
 ## Limits
 
 - QuantumOrb only reads public on-chain data. It never asks for keys or seed phrases and never touches funds.
@@ -140,5 +186,6 @@ figures and the descriptions are hidden until it opens.</sub>
 ---
 
 <sub>Screens are from a development build running on simulated data, so every token, wallet and figure
-on them is made up. The source code of QuantumOrb is closed; this repository is its public page.
+on them is made up. Most of QuantumOrb's source is closed; this repository is its public page, and the
+rules that decide a verdict are open in it.
 Found a bug or have an idea? <a href="https://github.com/QunatOrb/QuantOrb/issues">Open an issue</a>. © 2026 QuantumOrb. All rights reserved.</sub>
