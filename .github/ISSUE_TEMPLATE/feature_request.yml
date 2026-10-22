@@ -1,0 +1,16 @@
+name: Idea
+description: A check, a filter or anything else you would like QuantumOrb to do
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What should QuantumOrb do, and what would it help you decide?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: An example
+      description: A token or a situation where it would have mattered (optional)

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Every rule the scanner uses
+    url: https://github.com/QuantumOrb/QuantOrb/blob/main/docs/scoring.md
+    about: Why a token got its score, rule by rule
