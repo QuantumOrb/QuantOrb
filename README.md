@@ -9,6 +9,10 @@
 
 [**quantumorb.app**](https://quantumorb.app) · [Every rule, in plain words](https://quantumorb.app/#how) · Telegram bot: coming soon
 
+[![rules](https://github.com/QunatOrb/QuantOrb/actions/workflows/test.yml/badge.svg)](https://github.com/QunatOrb/QuantOrb/actions/workflows/test.yml)
+![node](https://img.shields.io/badge/node-18%2B-5d94e8)
+![dependencies](https://img.shields.io/badge/dependencies-none-4fdf8f)
+
 </div>
 
 ---
