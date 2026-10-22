@@ -9,6 +9,10 @@
 
 The site and the Telegram bot open soon. Their links will appear here first.
 
+[![rules](https://github.com/QunatOrb/QuantOrb/actions/workflows/test.yml/badge.svg)](https://github.com/QunatOrb/QuantOrb/actions/workflows/test.yml)
+![node](https://img.shields.io/badge/node-18%2B-5d94e8)
+![dependencies](https://img.shields.io/badge/dependencies-none-4fdf8f)
+
 </div>
 
 ---
