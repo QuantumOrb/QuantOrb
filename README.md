@@ -19,8 +19,9 @@ The site and the Telegram bot open soon. Their links will appear here first.
 
 Paste a token address. In about ten seconds QuantumOrb reads the top holders from the chain and tells
 you who really holds the token, how far the price falls if they sell, and what the owner can still
-change. Alongside the scanner, a live Radar watches every new pump.fun launch, and Guard checks who
-made each one. A Telegram bot that brings all of it to your chat is in closed testing.
+change. Alongside the scanner, a live Radar watches every new pump.fun launch and Shield checks who
+made each one; on a token page Guard goes deeper. A Telegram bot that brings all of it to your chat is in
+closed testing.
 
 <p align="center"><img src="assets/screens/home.png" alt="QuantumOrb: the scanner" width="100%"></p>
 
@@ -30,7 +31,7 @@ made each one. A Telegram bot that brings all of it to your chat is in closed te
 |---|---|
 | **Who really holds it?** | The top 20 wallets by share of the real float. The curve, pools, lockers and burn addresses are left out, so a pool never looks like a whale. Wallets that belong together are merged into **operators**. |
 | **What happens if they sell?** | A sell scenario: how far the price would fall if the linked, fresh or transferred wallets sold into today's liquidity. |
-| **What else can hurt you?** | Owner powers, who can pull the liquidity, the creator's history and live buy and sell pressure. |
+| **What else can hurt you?** | Owner powers, who can pull the liquidity, the first 20 buyers, and who made the token: Guard's three checks on the dev wallet that signed the launch. |
 
 Every scan ends in a **score from 0 to 100** and a verdict: **CLEAN**, **OK**, **RISKY** or **DANGER**.
 Some patterns are too clear for a weighted sum, and they force a red flag whatever the score. When a
@@ -38,7 +39,7 @@ token is too young or too established for holder patterns to mean anything, the 
 gives no score.
 
 <p align="center"><img src="assets/screens/token.png" alt="A token page after a scan" width="100%"><br>
-<sub><b>A token page.</b> The verdict and its reasons, the live scan log, what the owner can still change, and who can pull the liquidity.</sub></p>
+<sub><b>A token page.</b> The verdict and its reasons, the live scan log, what the owner can still change, who can pull the liquidity, and who made it, with Guard. The market header refreshes every minute while the page is open, and a figure no source knows says N/A, never $0.</sub></p>
 
 <table>
 <tr>
@@ -49,18 +50,17 @@ gives no score.
 </tr>
 </table>
 
-## Six checks behind every verdict
+## Five checks behind every verdict
 
-<p align="center"><img src="assets/screens/checks.png" alt="Six checks" width="100%"></p>
+<p align="center"><img src="assets/screens/checks.png" alt="Five checks" width="100%"></p>
 
 | Check | What it reads |
 |---|---|
-| **Holders** | The top 20 wallets by share of the real float: bought or received, fresh or experienced, how fast they got in |
+| **Holders** | The top 20 wallets by share of the real float: bought or received, fresh or experienced (from none to 100+ tokens traded before), how fast they got in |
 | **Linked wallets** | Wallets that act as one: the same buy transaction, tokens from one source, transfers between holders, packs of fresh wallets |
-| **First buyers** | The first 20 buyers after launch and what each did since: holding, added, sold, sent to the same wallet |
+| **First buyers** | All of the first 20 buyers after launch, even behind a bundle that trades with itself, and what each did since: holding, added, sold, sent to the same wallet |
 | **Owner powers** | Mint and freeze authority, mutable metadata, Token-2022 transfer fees |
 | **Liquidity control** | Who holds the right to withdraw the pool, and how much of it |
-| **Buy & sell pressure** | Buys and sells minute by minute, with alerts when many wallets sell at once |
 
 The score is a fixed, written set of rules, not a black box. Every weight, threshold and red flag is
 written down in [`docs/scoring.md`](docs/scoring.md), and the site's *How it works* page lists the same rules
@@ -71,8 +71,8 @@ in plain words.
 ## Check the score yourself
 
 The code that turns a scan into a verdict is open: [`rules/`](rules). The score, operators, red flags,
-caps, the sell scenario and Guard's checks are the server's own functions, not a rewrite. The examples
-carry results the server itself produced, and the tests hold the open code to them.
+caps, the sell scenario, Guard's checks and Shield's rule are the server's own functions, not a rewrite.
+The examples carry results the server itself produced, and the tests hold the open code to them.
 
 ```bash
 git clone https://github.com/QunatOrb/QuantOrb && cd QuantOrb
@@ -97,23 +97,31 @@ CAP · pack of 3 wallets holds 9.9% of float
 SCENARIO · if the linked, fresh and transferred wallets sold their 54.9% of float into today's liquidity, the price would fall about 75%
 ```
 
-Rule by rule: [`docs/scoring.md`](docs/scoring.md) · [`docs/guard.md`](docs/guard.md).
+Rule by rule: [`docs/scoring.md`](docs/scoring.md) · [`docs/guard.md`](docs/guard.md) (Guard and Shield).
 
-## Radar and Guard
+## Radar, Shield and Guard
 
-New pump.fun launches appear on the Radar seconds after they go live. Set filters for market cap,
-curve progress, socials and keywords, then send them to the bot to get the same feed in Telegram.
+New pump.fun launches appear on the Radar seconds after they go live. It keeps the last 1,000, about the
+last hour, and your filters run over all of them: market cap, curve progress, socials, keywords. Send the
+filters to the bot to get the same feed in Telegram.
 
-Before you see a launch, **Guard** checks who made it: the creator's history, how much supply was
-bought in the launch slot, and how much the dev still holds. A launch is held back only on evidence,
-and the reason is always shown.
+Before you see a launch, **Shield** checks who made it, on free public data:
+
+- **Creator history** · every pump.fun launch of the dev wallet, read from the chain once the launch
+  reaches 10% of its curve or 20 buyers. 10 or more launches with under 10% graduated is a serial creator.
+- **Dev at launch** · how much of the supply the dev bought in the launch itself. 15% or more is held.
+
+On a token page and in every scan, **Guard** goes deeper with three checks: the creator's launches,
+how much supply was bought in the launch slot, and how much the dev still holds now. Either way a launch
+is held back only on evidence, the reason is always shown, and a check that could not be read says so:
+it is never a silent pass.
 
 <p align="center"><img src="assets/screens/radar.png" alt="Radar" width="100%"></p>
 
 <table>
 <tr>
-<td width="50%" valign="top"><img src="assets/screens/guard.png" alt="Guard"><br>
-<sub><b>Guard.</b> Three checks on every launch, live decisions as they happen.</sub></td>
+<td width="50%" valign="top"><img src="assets/screens/guard.png" alt="Shield"><br>
+<sub><b>Shield.</b> Two checks on every launch, live decisions as they happen.</sub></td>
 <td width="50%" valign="top"><img src="assets/screens/launches.png" alt="The last 1,000 launches"><br>
 <sub><b>The last 1,000 launches.</b> Each new token flashes in where the oldest one was. Few ever reach a pool.</sub></td>
 </tr>
@@ -129,14 +137,15 @@ link will appear here when it opens.
 | `/alerts` | New pump.fun launches the moment they pass **your** filters: market cap, bonding-curve progress, required socials, SOL pairs only, keywords |
 | `/watch` | Track a token: graduation from the bonding curve, market-cap moves up or down, milestones from $10K to $100M |
 | `/follow` | Track a wallet: every new position and every full exit |
-| `/dev` | Know the second a dev wallet launches a token, with its record so far |
-| `/token` | Any token on demand: market cap, price, ATH, curve, volume and the latest trades. Or just paste an address |
+| `/dev` | Know the second a dev wallet launches a token, with its Shield record |
+| `/token` | Any token on demand: market cap, price, curve, volume, buys and sells, price change, the creator and Shield. Or just paste an address |
 | `/new` · `/list` | The latest launches, and everything you follow in one place |
 | `/scan` | On-chain intelligence in the chat: hidden ownership, wallet clusters, capital flows · *coming soon* |
 
-**Shield** checks the creator of every launch before an alert goes out. A wallet that launches by the
-dozen and almost never graduates is a serial creator, and its launches are screened out. The same check
-comes with every token card and every dev you follow.
+**Shield** checks the creator of every launch before an alert goes out: every pump.fun launch of that
+wallet, straight from the chain. A wallet that launches by the dozen and almost never graduates is a
+serial creator, and its launches are screened out. The same check comes with every token card and every
+dev you follow. New launches reach the bot the moment they happen, with no polling delay.
 
 <sub>Development build on made-up data. The bot's name, the names of coins and wallets, addresses,
 figures and the descriptions are hidden until it opens.</sub>
@@ -150,7 +159,7 @@ figures and the descriptions are hidden until it opens.</sub>
 </tr>
 <tr>
 <td valign="top"><img src="assets/screens/bot-token.png" alt="The bot: a token card"><br>
-<sub><b>Any token.</b> Send an address, get its card: market, curve, creator, activity and the latest trades.</sub></td>
+<sub><b>Any token.</b> Send an address, get its card: market, curve, creator, Shield, and buys and sells from 5 minutes to 24 hours.</sub></td>
 <td valign="top"><img src="assets/screens/bot-watch.png" alt="The bot: watch"><br>
 <sub><b>Watch.</b> A token you follow moves, graduates and crosses a milestone: every reason in one message.</sub></td>
 </tr>
@@ -170,10 +179,10 @@ figures and the descriptions are hidden until it opens.</sub>
 
 | Folder | |
 |---|---|
-| [`rules/`](rules) | The open rules: score, operators, Guard's checks, and a command that prints a verdict |
+| [`rules/`](rules) | The open rules: score, operators, Guard's and Shield's checks, and a command that prints a verdict |
 | [`examples/`](examples) | Scan inputs with the verdict each must get: the site's example token, scans the server made, one file per rule |
 | [`test/`](test) | `npm test`: every rule at its edges, and the examples against the server's results |
-| [`docs/`](docs) | How QuantumOrb fits together, the score rule by rule, Guard |
+| [`docs/`](docs) | How QuantumOrb fits together, the score rule by rule, Guard and Shield |
 | [`assets/`](assets) | The banner and the screens above |
 | [`.github/`](.github) | Issue templates |
 
@@ -186,7 +195,10 @@ What changed and when: [`CHANGELOG.md`](CHANGELOG.md).
 - QuantumOrb only reads public on-chain data. It never asks for keys or seed phrases and never touches funds.
 - It sees wallets, not people. Two wallets of one person with no on-chain connection look independent.
 - A CLEAN score is not a promise. Liquidity, sentiment and the dev's off-chain plans are outside what it can read.
-- Nothing here is financial advice.
+- Five new scans a day per person, on the site and in the bot. Opening a report again, or reloading the page
+  during a scan, never counts.
+- Nothing here is financial advice or a call to buy, sell or hold. The score is an automated, subjective
+  assessment by a fixed set of criteria, on public data that can be incomplete.
 
 ---
 
