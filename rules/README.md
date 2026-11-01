@@ -1,15 +1,17 @@
 # rules/
 
-The part of the QuantumOrb scanner that turns what it read into a verdict: the score, the operators and
-Guard's three checks. These files are the server's own code, not a rewrite. The function bodies are
-identical to what the QuantumOrb server runs; only the `require()` lines point
-here instead.
+The part of the QuantumOrb scanner that turns what it read into a verdict: the score, the operators,
+Guard's three checks on a token page, and Shield's rule on every launch. These files are the server's own
+code, not a rewrite. The function bodies are identical to what the QuantumOrb server runs;
+only the `require()` lines point here instead. The one exception is Shield's `creatorCheck()`, which keeps
+what happens once a creator's record is known and leaves out the lookup on the chain.
 
 | File | What it does |
 |---|---|
 | [`score.js`](score.js) | The score from 0 to 100: five parts, red flags, caps, the band and the sell scenario |
 | [`operators.js`](operators.js) | Links between holders → operators. Proven links merge wallets; a pack counts at 60% |
-| [`guard.js`](guard.js) | Guard's three checks on a launch: creator history, first-slot buyers, dev holdings |
+| [`guard.js`](guard.js) | Guard's three checks on a token page: creator history, first-slot buyers, dev holdings |
+| [`shield.js`](shield.js) | Shield on every launch: a serial creator (10+ launches, under 10% graduated) and the dev's buy at launch |
 | [`verdict.js`](verdict.js) | One scan from start to finish, in the scanner's order: too established → too early → operators → score |
 | [`limits.js`](limits.js) | Every threshold, in one place |
 | [`format.js`](format.js) | `pct`, `usd`, `sum` |
@@ -39,5 +41,5 @@ The input format is described at the top of [`verdict.js`](verdict.js) and shown
 ## What is not here
 
 Everything that fills the input: reading the top holders from the chain, how each wallet got in, which
-ones are fresh or snipers, finding the links between them, the pool and its reserve, the trade stream,
-the creator's history from pump.fun. That is the closed part of the scanner.
+ones are fresh or snipers, finding the links between them, the pool and its reserve, the launch stream,
+the creator's launches on the chain. That is the closed part of the scanner.

@@ -89,10 +89,13 @@ test('cap: a proven operator of 3+ wallets holds the verdict at RISKY', () => {
   assert.ok(r.gates.some(g => /proven operator of 3 wallets/.test(g.text)));
 });
 
-test('cap: liquidity under $1,000 holds the verdict at RISKY', () => {
+test('cap: liquidity under $1,000 holds the verdict at RISKY; unknown liquidity never does', () => {
   const r = run(holders(spread(20)), { liquidityUsd: 900 });
   assert.strictEqual(r.score, 59);
   assert.strictEqual(r.band, 'RISKY');
+  const unknown = run(holders(spread(20)), { liquidityUsd: null });
+  assert.strictEqual(unknown.band, 'CLEAN');
+  assert.ok(!unknown.gates.some(g => /liquidity/.test(g.text)));
 });
 
 test('unread wallets are never evidence; 3 or more cap the verdict and make it PARTIAL', () => {
@@ -104,9 +107,11 @@ test('unread wallets are never evidence; 3 or more cap the verdict and make it P
   assert.ok(three.score <= 59);
 });
 
-test('a wallet under 0.5% of float that was not read does not count toward PARTIAL', () => {
-  const h = holders(spread(17).concat([0.004, 0.004, 0.004]), i => ({ unread: i >= 17 }));
-  assert.strictEqual(run(h).state, 'ok');
+test('a wallet under 0.2% of float that was not read does not count toward PARTIAL', () => {
+  const small = holders(spread(17).concat([0.0015, 0.0015, 0.0015]), i => ({ unread: i >= 17 }));
+  assert.strictEqual(run(small).state, 'ok');
+  const read = holders(spread(17).concat([0.003, 0.003, 0.003]), i => ({ unread: i >= 17 }));
+  assert.strictEqual(run(read).state, 'partial');            /* 0.3% is read deeply, so unread there counts */
 });
 
 test('the dev wallet is left out of fresh wallets and snipers', () => {
@@ -139,6 +144,8 @@ test('too early under 10 holders, too established when old, deep and big', () =>
   assert.strictEqual(run(holders(spread(10))).band !== 'EARLY', true);
   const old = run(holders(spread(20)), { market: { ageDays: 31, liquidityUsd: 600000, mcap: 2e7 } });
   assert.strictEqual(old.band, 'ESTABLISHED');
+  const fdvOnly = run(holders(spread(20)), { market: { ageDays: 31, liquidityUsd: 600000, mcap: null, fdv: 2e7 } });
+  assert.strictEqual(fdvOnly.band, 'ESTABLISHED');        /* no market cap known: the FDV decides */
   const young = run(holders(spread(20)), { market: { ageDays: 29, liquidityUsd: 600000, mcap: 2e7 } });
   assert.notStrictEqual(young.band, 'ESTABLISHED');
 });

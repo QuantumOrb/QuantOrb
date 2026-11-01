@@ -16,15 +16,15 @@ const HOLDER = { kind: null, virgin: false, unread: false, sniper: false, bundle
      links         [{ a, b, kind, level: 'proven'|'pack' }] between holders (by position)
      floatTokens   supply outside the curve, pools, lockers and burn addresses
      reserveTokens tokens in the pool a sale would go into
-     liquidityUsd  the pool's liquidity
+     liquidityUsd  the pool's liquidity (null when no source knows it: then it never caps the verdict)
      stage         'curve' or a pool name (only for the TOO EARLY headline)
-     market        { ageDays, liquidityUsd, mcap } (only for TOO ESTABLISHED)
-     creator, slot0Share, devShare, traded   (optional: Guard) */
+     market        { ageDays, liquidityUsd, mcap, fdv } (only for TOO ESTABLISHED)
+     creator, slot0Share, devShare, traded   (optional: Guard; creator as { launched, graduated, chain: true }) */
 function scanVerdict(input) {
   const SC = cfg.scan, mk = input.market || null;
   const out = { guard: hasGuard(input) ? guard({ history: input.creator, slot0Share: input.slot0Share, devShare: input.devShare, traded: input.traded }) : undefined };
 
-  if (mk && mk.ageDays > SC.establishedDays && mk.liquidityUsd > SC.establishedLiq && mk.mcap > SC.establishedMcap)
+  if (mk && mk.ageDays > SC.establishedDays && mk.liquidityUsd > SC.establishedLiq && (mk.mcap || mk.fdv) > SC.establishedMcap)
     return Object.assign({ state: 'too_established', band: 'ESTABLISHED', score: null, operators: [], gates: [], scenario: null, headline: 'Too established for a holder scan' }, out);
 
   const hs = (input.holders || []).map((h, i) => Object.assign({}, HOLDER, h, { i, op: null }));

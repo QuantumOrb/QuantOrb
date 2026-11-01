@@ -1,22 +1,34 @@
 'use strict';
 /* Guard: three checks, the same for every new launch and for the creator card of a scan.
    HELD only on evidence: a check that has not been read yet is ok:null and never holds a launch.
-   These are the server's own check functions; reading the creator's history from pump.fun and the
-   launch slot from the trade stream is the closed part. */
+   These are the server's own check functions. Reading the creator's launches from the chain, the launch
+   slot and the dev's balance is the closed part. Guard runs on token pages and in scans; the Radar uses
+   Shield (shield.js). */
 const cfg = require('./limits');
 const { pct } = require('./format');
 
 const G = cfg.guard;
 
-/* h: { launched, alive, local? } — local means the history comes from launches the server saw itself */
+/* h: the creator's pump.fun launches.
+     { launched, graduated, chain: true }  read from the chain (every pump.fun curve of the wallet): the Shield rule
+     { launched, alive, local: true }      only the launches the server saw itself: evidence only when already serial
+     { launched, alive }                   an older source that knew which launches are still alive */
 function historyCheck(h) {
   if (!h) return { k: 'history', name: 'Creator history', ok: null, text: 'read once the launch gets traction' };
   if (h.unavailable) return { k: 'history', name: 'Creator history', ok: null, text: 'launch history not available right now' };
-  /* from our own record only (pump.fun's API did not answer): it starts when our stream started, so it says so */
+  /* from the chain: every launch with its graduated flag; the Telegram bot's rule (Shield): a serial creator launched
+     GUARD_HISTORY_MIN+ tokens and under SHIELD_MAX_GRAD_PCT % of them graduated */
+  if (h.chain) {
+    const bad = h.launched >= G.historyMinLaunched && h.graduated * 100 < cfg.shield.maxGradPct * h.launched;
+    return { k: 'history', name: 'Creator history', ok: !bad, text: h.launched + ' token' + (h.launched === 1 ? '' : 's') + ' launched, ' + h.graduated + ' graduated · from the chain',
+      reason: 'serial creator: ' + h.launched + ' launches, ' + h.graduated + ' graduated' };
+  }
+  /* from our own record only (the chain query failed): it starts when our stream started, so it is evidence
+     only when it already shows a serial creator; anything less is "not read", never a pass */
   if (h.local) {
     const bad = h.launched >= G.historyMinLaunched && h.alive / Math.max(1, h.launched) < G.historyMaxAliveRate;
-    return { k: 'history', name: 'Creator history', ok: !bad, text: h.launched <= 1 ? 'new to us · no earlier launches recorded' : h.launched + ' launches recorded by us, ' + h.alive + ' still alive',
-      reason: 'creator launched ' + h.launched + ' tokens we saw, ' + h.alive + ' alive' };
+    if (bad) return { k: 'history', name: 'Creator history', ok: false, text: h.launched + ' launches recorded by us, ' + h.alive + ' still alive', reason: 'creator launched ' + h.launched + ' tokens we saw, ' + h.alive + ' alive' };
+    return { k: 'history', name: 'Creator history', ok: null, text: h.launched <= 1 ? 'creator check unavailable: the public RPC did not answer' : h.launched + ' launches in our own record · full history not read' };
   }
   const bad = h.launched >= G.historyMinLaunched && h.alive / Math.max(1, h.launched) < G.historyMaxAliveRate;
   return { k: 'history', name: 'Creator history', ok: !bad, text: h.launched + ' token' + (h.launched === 1 ? '' : 's') + ' launched, ' + h.alive + ' still alive',
