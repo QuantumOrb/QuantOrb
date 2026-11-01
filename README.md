@@ -9,7 +9,7 @@
 
 The site and the Telegram bot open soon. Their links will appear here first.
 
-[![rules](https://github.com/QunatOrb/QuantOrb/actions/workflows/test.yml/badge.svg)](https://github.com/QunatOrb/QuantOrb/actions/workflows/test.yml)
+[![rules](https://github.com/QuantumOrb/QuantOrb/actions/workflows/test.yml/badge.svg)](https://github.com/QuantumOrb/QuantOrb/actions/workflows/test.yml)
 ![node](https://img.shields.io/badge/node-18%2B-5d94e8)
 ![dependencies](https://img.shields.io/badge/dependencies-none-4fdf8f)
 
@@ -75,7 +75,7 @@ caps, the sell scenario, Guard's checks and Shield's rule are the server's own f
 The examples carry results the server itself produced, and the tests hold the open code to them.
 
 ```bash
-git clone https://github.com/QunatOrb/QuantOrb && cd QuantOrb
+git clone https://github.com/QuantumOrb/QuantOrb && cd QuantOrb
 npm test                                        # Node 18+, no dependencies
 node rules/cli.js examples/site-example.json    # the example token on the home page
 ```
@@ -205,4 +205,4 @@ What changed and when: [`CHANGELOG.md`](CHANGELOG.md).
 <sub>Screens are from a development build running on simulated data, so every token, wallet and figure
 on them is made up. Most of QuantumOrb's source is closed; this repository is its public page, and the
 rules that decide a verdict are open in it.
-Found a bug or have an idea? <a href="https://github.com/QunatOrb/QuantOrb/issues">Open an issue</a>. © 2026 QuantumOrb. All rights reserved.</sub>
+Found a bug or have an idea? <a href="https://github.com/QuantumOrb/QuantOrb/issues">Open an issue</a>. © 2026 QuantumOrb. All rights reserved.</sub>
