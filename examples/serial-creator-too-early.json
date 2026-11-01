@@ -1,0 +1,57 @@
+{
+  "name": "Simulated · Grumoon Coin",
+  "symbol": "GRUMOON",
+  "note": "A fresh launch by a wallet with 68 earlier pump.fun launches, none of which graduated: Guard and Shield hold it as a serial creator. Too few holders yet for a score.",
+  "stage": "curve",
+  "creator": {
+    "launched": 68,
+    "graduated": 0,
+    "chain": true
+  },
+  "holders": [
+    {
+      "share": 0.2701835734109401,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.2450531057006406,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.16297209325746298,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.15993274339257324,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.1080392160578302,
+      "unread": true,
+      "kind": "buy"
+    },
+    {
+      "share": 0.05381926818055287,
+      "dev": true,
+      "unread": true,
+      "kind": "buy"
+    }
+  ],
+  "expect": {
+    "state": "too_early",
+    "score": null,
+    "band": "EARLY",
+    "parts": null,
+    "headline": "6 wallets hold this token outside the curve",
+    "gates": [],
+    "scenarioDrop": null,
+    "creatorCheck": {
+      "ok": false,
+      "text": "68 tokens launched, 0 graduated · from the chain"
+    }
+  }
+}

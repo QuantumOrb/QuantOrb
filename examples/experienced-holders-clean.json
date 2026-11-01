@@ -1,0 +1,104 @@
+{
+  "name": "Simulated · Busy Bee",
+  "symbol": "BUSYBEE",
+  "note": "Every top holder is an active trader with a long history (some with thousands of transactions, read from their first one). No links, nobody fresh: CLEAN.",
+  "stage": "curve",
+  "creator": {
+    "launched": 1,
+    "graduated": 0,
+    "chain": true
+  },
+  "floatTokens": 1000000000,
+  "reserveTokens": 1387805228.8774586,
+  "liquidityUsd": 6485.06,
+  "holders": [
+    {
+      "share": 0.11081729970673425,
+      "kind": "buy",
+      "sniper": true,
+      "sold": true
+    },
+    {
+      "share": 0.06733121151339283,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06713410609327021,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06701294423207785,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06634635256675209,
+      "kind": "buy"
+    },
+    {
+      "share": 0.0662543071275655,
+      "kind": "buy"
+    },
+    {
+      "share": 0.0651275331968233,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06489563057185319,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06370028621788601,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06271649801374785,
+      "kind": "buy"
+    },
+    {
+      "share": 0.06203448375402819,
+      "kind": "buy"
+    },
+    {
+      "share": 0.05975488560754206,
+      "kind": "buy"
+    },
+    {
+      "share": 0.0559729308222567,
+      "kind": "buy"
+    },
+    {
+      "share": 0.05135380546313675,
+      "kind": "buy"
+    },
+    {
+      "share": 0.04590608918345498,
+      "kind": "buy"
+    },
+    {
+      "share": 0.023641635929478374,
+      "kind": "buy",
+      "bundle": true,
+      "dev": true
+    }
+  ],
+  "links": [],
+  "expect": {
+    "state": "ok",
+    "score": 87,
+    "band": "CLEAN",
+    "parts": {
+      "operator": 32,
+      "virgin": 25,
+      "transfer": 20,
+      "sniper": 10,
+      "concentration": 0
+    },
+    "headline": "16 wallets → 16 operators, biggest holds 11.1% of float, could move price −14% if sold",
+    "gates": [],
+    "scenarioDrop": null,
+    "creatorCheck": {
+      "ok": true,
+      "text": "1 token launched, 0 graduated · from the chain"
+    }
+  }
+}

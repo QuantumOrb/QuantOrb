@@ -1,0 +1,95 @@
+{
+  "name": "Simulated · Taken Over",
+  "symbol": "CTO",
+  "note": "Every one of the top wallets is fresh: none traded anything before this token. A red flag forces DANGER even though the five parts add up to 65. (The creator fees of this token were later taken over by another wallet; the dev is still the wallet that signed the launch.)",
+  "stage": "curve",
+  "floatTokens": 1000000000,
+  "reserveTokens": 3797468354.430489,
+  "liquidityUsd": 2370,
+  "holders": [
+    {
+      "share": 0.15475704369130408,
+      "kind": "buy",
+      "bundle": true,
+      "dev": true
+    },
+    {
+      "share": 0.08712140624199341,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.0857288774769099,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.08387997122850475,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.08154997202771457,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.07871849422880331,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.0753704991171542,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.07149729291252296,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.0670974595025243,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.0621776769804956,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.05675336498131976,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.05084911115638509,
+      "kind": "buy",
+      "virgin": true
+    },
+    {
+      "share": 0.04449883045436792,
+      "kind": "buy",
+      "virgin": true
+    }
+  ],
+  "links": [],
+  "expect": {
+    "state": "ok",
+    "score": 65,
+    "band": "DANGER",
+    "parts": {
+      "operator": 35,
+      "virgin": 0,
+      "transfer": 20,
+      "sniper": 10,
+      "concentration": 0
+    },
+    "headline": "13 wallets → 13 operators, biggest holds 15.5% of float, could move price −8% if sold",
+    "gates": [
+      "100% of the top wallets never traded before this token"
+    ],
+    "scenarioDrop": null
+  }
+}
