@@ -64,8 +64,9 @@ Code: [`rules/operators.js`](../rules/operators.js).
 | 3 or more of the top 20 wallets could not be read in time (the scan is **PARTIAL**) | |
 | Liquidity is under $1,000 | |
 
-Wallets under 0.5% of float are not read deeply, and an unread one of them never counts toward PARTIAL.
-One or two unread wallets add a note, not a cap.
+Wallets under 0.2% of float are not read deeply, and an unread one of them never counts toward PARTIAL.
+One or two unread wallets add a note, not a cap. When no source knows the liquidity, it is unknown, not
+$0, and it never caps the verdict.
 
 ## The sell scenario
 
@@ -78,9 +79,9 @@ is a scenario, not a forecast, and it never changes the score.
 | | |
 |---|---|
 | **TOO EARLY** | Fewer than 10 wallets hold the token outside the curve and pools. One buy would change everything. |
-| **TOO ESTABLISHED** | Older than 30 days, more than $500K of liquidity and a market cap above $10M. The top holders of such tokens are exchanges and big pools. |
+| **TOO ESTABLISHED** | Older than 30 days, more than $500K of liquidity and a market cap above $10M (the FDV, when no market cap is known). The top holders of such tokens are exchanges and big pools. |
 
-Owner powers, liquidity and pressure still apply to both.
+Owner powers, liquidity, first buyers and Guard still apply to both.
 
 ## Check it yourself
 
