@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Every rule the scanner uses
+  - name: How it works, on quantumorb.app
+    url: https://quantumorb.app/#how
+    about: Why a token got its score, in plain words
+  - name: Every rule the scanner uses, with the code
     url: https://github.com/QuantumOrb/QuantOrb/blob/main/docs/scoring.md
     about: Why a token got its score, rule by rule

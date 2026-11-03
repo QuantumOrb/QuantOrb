@@ -5,7 +5,7 @@ every one of them.
 
 | File | Where it comes from | Verdict |
 |---|---|---|
-| [`site-example.json`](site-example.json) | The example token on the QuantumOrb home page | DANGER · 12 |
+| [`site-example.json`](site-example.json) | The example token on the [quantumorb.app](https://quantumorb.app) home page | DANGER · 12 |
 | [`bundle-and-pack.json`](bundle-and-pack.json) | A scan the server made on the simulated chain | DANGER · 18 |
 | [`received-not-bought.json`](received-not-bought.json) | A scan the server made on the simulated chain | DANGER · 35 |
 | [`all-fresh-wallets.json`](all-fresh-wallets.json) | A scan the server made on the simulated chain | DANGER · 65 (red flag) |

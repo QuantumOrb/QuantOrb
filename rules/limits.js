@@ -1,5 +1,5 @@
 'use strict';
-/* Every threshold the open rules use. These are the values the QuantumOrb server runs with, and the same
+/* Every threshold the open rules use. These are the values quantumorb.app runs with, and the same
    numbers the site lists on its "How it works" page. */
 module.exports = {
   scan: {

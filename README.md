@@ -7,7 +7,7 @@
 **A memecoin holder scanner for Solana.**<br>
 20 wallets can be 4 people. QuantumOrb shows who really holds a token.
 
-The site and the Telegram bot open soon. Their links will appear here first.
+[**quantumorb.app**](https://quantumorb.app) · [Every rule, in plain words](https://quantumorb.app/#how) · Telegram bot: coming soon
 
 [![rules](https://github.com/QuantumOrb/QuantOrb/actions/workflows/test.yml/badge.svg)](https://github.com/QuantumOrb/QuantOrb/actions/workflows/test.yml)
 ![node](https://img.shields.io/badge/node-18%2B-5d94e8)
@@ -17,11 +17,11 @@ The site and the Telegram bot open soon. Their links will appear here first.
 
 ---
 
-Paste a token address. In about ten seconds QuantumOrb reads the top holders from the chain and tells
-you who really holds the token, how far the price falls if they sell, and what the owner can still
-change. Alongside the scanner, a live Radar watches every new pump.fun launch and Shield checks who
-made each one; on a token page Guard goes deeper. A Telegram bot that brings all of it to your chat is in
-closed testing.
+Paste a token address on [quantumorb.app](https://quantumorb.app). In about ten seconds QuantumOrb reads
+the top holders from the chain and tells you who really holds the token, how far the price falls if they
+sell, and what the owner can still change. Alongside the scanner, a live Radar watches every new pump.fun
+launch and Shield checks who made each one; on a token page Guard goes deeper. A Telegram bot that brings
+all of it to your chat is in closed testing.
 
 <p align="center"><img src="assets/screens/home.png" alt="QuantumOrb: the scanner" width="100%"></p>
 
@@ -63,8 +63,8 @@ gives no score.
 | **Liquidity control** | Who holds the right to withdraw the pool, and how much of it |
 
 The score is a fixed, written set of rules, not a black box. Every weight, threshold and red flag is
-written down in [`docs/scoring.md`](docs/scoring.md), and the site's *How it works* page lists the same rules
-in plain words.
+published on the site, [quantumorb.app/#how](https://quantumorb.app/#how), and rule by rule with the code in
+[`docs/scoring.md`](docs/scoring.md).
 
 <p align="center"><img src="assets/screens/rules.png" alt="How the score is built" width="100%"></p>
 

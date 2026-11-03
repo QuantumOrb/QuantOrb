@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in QuantumOrb or in this repository looks wrong or does not work
+description: Something on quantumorb.app or in this repository looks wrong or does not work
 labels: [bug]
 body:
   - type: markdown
@@ -11,8 +11,8 @@ body:
     id: where
     attributes:
       label: Where
-      description: The file in this repository, the page, or the token address you scanned
-      placeholder: rules/score.js, examples/…, or a token address
+      description: The page, the token address you scanned, or the file in this repository
+      placeholder: https://quantumorb.app/#t-…, a token address, or rules/score.js
     validations:
       required: true
   - type: textarea

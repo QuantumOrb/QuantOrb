@@ -35,7 +35,7 @@ flowchart LR
   HR --> RE
   HR --> TP
   MD --> TP
-  SC --> W[the site · coming soon]
+  SC --> W[quantumorb.app]
   RD --> W
   SC --> B[Telegram bot · coming soon]
   RD --> B

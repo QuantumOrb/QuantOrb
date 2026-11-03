@@ -1,5 +1,12 @@
 # Changelog
 
+## 3 November 2026 · the site is public
+
+- QuantumOrb is live at **[quantumorb.app](https://quantumorb.app)**: the holder scanner, the Radar with
+  Shield on every launch, and token pages with Guard. Every rule is on
+  [quantumorb.app/#how](https://quantumorb.app/#how).
+- The Telegram bot follows later; its link will be published here and on the site when it opens.
+
 ## 1 November 2026 · the repository follows the new site and bot
 
 - [`rules/`](rules): Guard's creator history now uses the chain record and the Shield rule (10+ launches,
