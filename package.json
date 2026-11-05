@@ -2,7 +2,7 @@
   "name": "quantumorb-rules",
   "version": "1.0.0",
   "private": true,
-  "description": "QuantumOrb's open rules: the score, operators and Guard checks the scanner runs, with tests and example tokens.",
+  "description": "QuantumOrb's open code: the rules behind every verdict, the pump.fun chain reader and the token-page market figures (JavaScript), and the Telegram bot's messages, Shield and chain reader (Python), with tests.",
   "main": "rules/index.js",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
@@ -10,6 +10,7 @@
   },
   "scripts": {
     "test": "node --test",
+    "test:bot": "python3 -m unittest discover -s bot/tests",
     "verdict": "node rules/cli.js"
   }
 }

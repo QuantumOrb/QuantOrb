@@ -1,0 +1,1233 @@
+{
+ "mint": "4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+ "quoteMint": "AnthrpQuoteMint1111111111111111111111111pump",
+ "fakeMint": "FakeAntSameNameMint11111111111111111111pump",
+ "pools": {
+  "ps": "AntAnthrpPumpSwapPoo11111111111111111111111",
+  "ray": "AntSoLRaydiumPoo1111111111111111111111111",
+  "dust": "AntSoLDustMeteoraPoo111111111111111111111",
+  "quote": "AnthrpAntQuoteSidePoo11111111111111111111",
+  "fake": "FakeAntSameNamePoo1111111111111111111111",
+  "curve": "AntPumpFunCurvePoo1111111111111111111111",
+  "dead": "AntUsdcDeadOrcaPoo1111111111111111111111"
+ },
+ "ownerCheck": {
+  "fdv": 392596.19,
+  "liquidity": 61086.74,
+  "price": 0.0004043150322,
+  "marketCap": null
+ },
+ "dexscreener": [
+  {
+   "chainId": "solana",
+   "dexId": "pumpswap",
+   "url": "https://dexscreener.com/solana/antanthrppumpswappoo11111111111111111111111",
+   "pairAddress": "AntAnthrpPumpSwapPoo11111111111111111111111",
+   "labels": [],
+   "baseToken": {
+    "address": "4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+    "name": "Anthropic",
+    "symbol": "ANT"
+   },
+   "quoteToken": {
+    "address": "AnthrpQuoteMint1111111111111111111111111pump",
+    "name": "ANTHROPIC",
+    "symbol": "ANTHROPIC"
+   },
+   "priceNative": "0.007730690",
+   "txns": {
+    "m5": {
+     "buys": 3,
+     "sells": 2
+    },
+    "h1": {
+     "buys": 40,
+     "sells": 31
+    },
+    "h6": {
+     "buys": 260,
+     "sells": 190
+    },
+    "h24": {
+     "buys": 812,
+     "sells": 640
+    }
+   },
+   "volume": {
+    "h24": 0,
+    "h6": 0,
+    "h1": 0,
+    "m5": 0
+   },
+   "priceChange": {
+    "m5": 0.3,
+    "h1": -1.2,
+    "h6": 4.1,
+    "h24": 12.5
+   },
+   "liquidity": null,
+   "fdv": null,
+   "marketCap": null,
+   "pairCreatedAt": 1792591511000,
+   "info": {
+    "imageUrl": "",
+    "websites": [
+     {
+      "label": "Website",
+      "url": "https://example.org"
+     }
+    ],
+    "socials": [
+     {
+      "type": "twitter",
+      "url": "https://x.com/example"
+     }
+    ]
+   }
+  }
+ ],
+ "geckoterminal": {
+  "data": [
+   {
+    "id": "solana_AntAnthrpPumpSwapPoo11111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntAnthrpPumpSwapPoo11111111111111111111111",
+     "name": "ANT / ANTHRP",
+     "pool_created_at": "2026-10-21T14:05:11Z",
+     "base_token_price_usd": "0.0004043150322",
+     "quote_token_price_usd": "0.0523",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": "0.00773069",
+     "quote_token_price_base_token": "129.3544",
+     "fdv_usd": "392596.19",
+     "market_cap_usd": null,
+     "reserve_in_usd": "61086.74",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "84211.55"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 812,
+       "sells": 640,
+       "buyers": 812,
+       "sellers": 640
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_AnthrpQuoteMint1111111111111111111111111pump",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "pumpswap",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntSoLRaydiumPoo1111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntSoLRaydiumPoo1111111111111111111111111",
+     "name": "ANT / SOL",
+     "pool_created_at": "2026-10-22T09:00:00Z",
+     "base_token_price_usd": "0.000405",
+     "quote_token_price_usd": "182.4",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "393260.4",
+     "market_cap_usd": null,
+     "reserve_in_usd": "8412.3",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "21000.4"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 230,
+       "sells": 190,
+       "buyers": 230,
+       "sellers": 190
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_So11111111111111111111111111111111111111112",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntSoLDustMeteoraPoo111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntSoLDustMeteoraPoo111111111111111111111",
+     "name": "ANT / SOL 0.25%",
+     "pool_created_at": "2026-10-23T10:00:00Z",
+     "base_token_price_usd": "0.0011",
+     "quote_token_price_usd": "182.4",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "1068000",
+     "market_cap_usd": null,
+     "reserve_in_usd": "310.5",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "99000"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 4,
+       "sells": 2,
+       "buyers": 4,
+       "sellers": 2
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_So11111111111111111111111111111111111111112",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "meteora",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AnthrpAntQuoteSidePoo11111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AnthrpAntQuoteSidePoo11111111111111111111",
+     "name": "ANTHRP / ANT",
+     "pool_created_at": "2026-10-22T12:00:00Z",
+     "base_token_price_usd": "0.0523",
+     "quote_token_price_usd": "0.0004041",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "52300000",
+     "market_cap_usd": "50000000",
+     "reserve_in_usd": "4021",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "6100"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 80,
+       "sells": 75,
+       "buyers": 80,
+       "sellers": 75
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_AnthrpQuoteMint1111111111111111111111111pump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "pumpswap",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_FakeAntSameNamePoo1111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "FakeAntSameNamePoo1111111111111111111111",
+     "name": "ANT / SOL",
+     "pool_created_at": "2025-01-01T00:00:00Z",
+     "base_token_price_usd": "1.2",
+     "quote_token_price_usd": "182.4",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "1200000000",
+     "market_cap_usd": "900000000",
+     "reserve_in_usd": "512000",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "900000"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 5000,
+       "sells": 4800,
+       "buyers": 5000,
+       "sellers": 4800
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_FakeAntSameNameMint11111111111111111111pump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_So11111111111111111111111111111111111111112",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntPumpFunCurvePoo1111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntPumpFunCurvePoo1111111111111111111111",
+     "name": "ANT / ANTHRP",
+     "pool_created_at": "2026-10-21T08:12:40Z",
+     "base_token_price_usd": "0.0000641",
+     "quote_token_price_usd": "0.0523",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "62240",
+     "market_cap_usd": null,
+     "reserve_in_usd": "0",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "0"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 0,
+       "sells": 0,
+       "buyers": 0,
+       "sellers": 0
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_AnthrpQuoteMint1111111111111111111111111pump",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "pump-fun",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntUsdcDeadOrcaPoo1111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntUsdcDeadOrcaPoo1111111111111111111111",
+     "name": "ANT / USDC",
+     "pool_created_at": "2026-10-24T03:00:00Z",
+     "base_token_price_usd": "0.00061",
+     "quote_token_price_usd": "1",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "592000",
+     "market_cap_usd": null,
+     "reserve_in_usd": "9100",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "0"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 0,
+       "sells": 0,
+       "buyers": 0,
+       "sellers": 0
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "orca",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo001111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo001111111111111111111111111111111",
+     "name": "ANT / X0",
+     "pool_created_at": "2026-10-25T00:00:00Z",
+     "base_token_price_usd": "0.0001",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "97100",
+     "market_cap_usd": null,
+     "reserve_in_usd": "20",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "50"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 1,
+       "sells": 0,
+       "buyers": 1,
+       "sellers": 0
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote011111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium-clmm",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo011111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo011111111111111111111111111111111",
+     "name": "ANT / X1",
+     "pool_created_at": "2026-10-25T01:00:00Z",
+     "base_token_price_usd": "0.00030000000000000003",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "291300",
+     "market_cap_usd": null,
+     "reserve_in_usd": "45",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "450"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 2,
+       "sells": 1,
+       "buyers": 2,
+       "sellers": 1
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote111111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "meteora",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo021111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo021111111111111111111111111111111",
+     "name": "ANT / X2",
+     "pool_created_at": "2026-10-25T02:00:00Z",
+     "base_token_price_usd": "0.0005",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "485500",
+     "market_cap_usd": null,
+     "reserve_in_usd": "70",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "850"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 3,
+       "sells": 2,
+       "buyers": 3,
+       "sellers": 2
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote211111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium-clmm",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo031111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo031111111111111111111111111111111",
+     "name": "ANT / X3",
+     "pool_created_at": "2026-10-25T03:00:00Z",
+     "base_token_price_usd": "0.0007000000000000001",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "679700.0000000001",
+     "market_cap_usd": null,
+     "reserve_in_usd": "95",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "1250"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 4,
+       "sells": 3,
+       "buyers": 4,
+       "sellers": 3
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote311111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "meteora",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo041111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo041111111111111111111111111111111",
+     "name": "ANT / X4",
+     "pool_created_at": "2026-10-25T04:00:00Z",
+     "base_token_price_usd": "0.0009000000000000001",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "873900.0000000001",
+     "market_cap_usd": null,
+     "reserve_in_usd": "120",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "1650"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 5,
+       "sells": 4,
+       "buyers": 5,
+       "sellers": 4
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote411111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium-clmm",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo051111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo051111111111111111111111111111111",
+     "name": "ANT / X5",
+     "pool_created_at": "2026-10-25T05:00:00Z",
+     "base_token_price_usd": "0.0011",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "1068100",
+     "market_cap_usd": null,
+     "reserve_in_usd": "145",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "2050"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 6,
+       "sells": 5,
+       "buyers": 6,
+       "sellers": 5
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote511111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "meteora",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo061111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo061111111111111111111111111111111",
+     "name": "ANT / X6",
+     "pool_created_at": "2026-10-25T06:00:00Z",
+     "base_token_price_usd": "0.0013000000000000002",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "1262300.0000000002",
+     "market_cap_usd": null,
+     "reserve_in_usd": "170",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "2450"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 7,
+       "sells": 6,
+       "buyers": 7,
+       "sellers": 6
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote611111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium-clmm",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo071111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo071111111111111111111111111111111",
+     "name": "ANT / X7",
+     "pool_created_at": "2026-10-25T07:00:00Z",
+     "base_token_price_usd": "0.0015",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "1456500",
+     "market_cap_usd": null,
+     "reserve_in_usd": "195",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "2850"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 8,
+       "sells": 7,
+       "buyers": 8,
+       "sellers": 7
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote711111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "meteora",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo081111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo081111111111111111111111111111111",
+     "name": "ANT / X8",
+     "pool_created_at": "2026-10-25T08:00:00Z",
+     "base_token_price_usd": "0.0017000000000000001",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "1650700.0000000002",
+     "market_cap_usd": null,
+     "reserve_in_usd": "220",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "3250"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 9,
+       "sells": 8,
+       "buyers": 9,
+       "sellers": 8
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote811111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium-clmm",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo091111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo091111111111111111111111111111111",
+     "name": "ANT / X9",
+     "pool_created_at": "2026-10-25T00:00:00Z",
+     "base_token_price_usd": "0.0019000000000000002",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "1844900.0000000002",
+     "market_cap_usd": null,
+     "reserve_in_usd": "245",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "3650"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 10,
+       "sells": 9,
+       "buyers": 10,
+       "sellers": 9
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote911111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "meteora",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo101111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo101111111111111111111111111111111",
+     "name": "ANT / X10",
+     "pool_created_at": "2026-10-25T01:00:00Z",
+     "base_token_price_usd": "0.0021",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "2039099.9999999998",
+     "market_cap_usd": null,
+     "reserve_in_usd": "270",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "4050"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 11,
+       "sells": 10,
+       "buyers": 11,
+       "sellers": 10
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote1011111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium-clmm",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo111111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo111111111111111111111111111111111",
+     "name": "ANT / X11",
+     "pool_created_at": "2026-10-25T02:00:00Z",
+     "base_token_price_usd": "0.0023",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "2233300",
+     "market_cap_usd": null,
+     "reserve_in_usd": "295",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "4450"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 12,
+       "sells": 11,
+       "buyers": 12,
+       "sellers": 11
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote1111111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "meteora",
+       "type": "dex"
+      }
+     }
+    }
+   },
+   {
+    "id": "solana_AntTinyPoo121111111111111111111111111111111",
+    "type": "pool",
+    "attributes": {
+     "address": "AntTinyPoo121111111111111111111111111111111",
+     "name": "ANT / X12",
+     "pool_created_at": "2026-10-25T03:00:00Z",
+     "base_token_price_usd": "0.0025",
+     "quote_token_price_usd": "0.01",
+     "base_token_price_native_currency": null,
+     "quote_token_price_native_currency": null,
+     "base_token_price_quote_token": null,
+     "quote_token_price_base_token": null,
+     "fdv_usd": "2427500",
+     "market_cap_usd": null,
+     "reserve_in_usd": "320",
+     "volume_usd": {
+      "m5": "0",
+      "m15": "0",
+      "m30": "0",
+      "h1": "0",
+      "h6": "0",
+      "h24": "4850"
+     },
+     "transactions": {
+      "h24": {
+       "buys": 13,
+       "sells": 12,
+       "buyers": 13,
+       "sellers": 12
+      }
+     },
+     "price_change_percentage": {
+      "h24": "0"
+     }
+    },
+    "relationships": {
+     "base_token": {
+      "data": {
+       "id": "solana_4Wdn6GGJLdyeMLLfzu3pPQMmf9Kivd8e9xmbLb2bpump",
+       "type": "token"
+      }
+     },
+     "quote_token": {
+      "data": {
+       "id": "solana_TinyQuote1211111111111111111111111111111111",
+       "type": "token"
+      }
+     },
+     "dex": {
+      "data": {
+       "id": "raydium-clmm",
+       "type": "dex"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

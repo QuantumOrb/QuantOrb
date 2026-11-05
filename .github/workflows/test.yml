@@ -1,4 +1,4 @@
-name: rules
+name: tests
 
 on:
   push:
@@ -9,8 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  test:
-    name: npm test · Node ${{ matrix.node }}
+  js:
+    name: rules, chain, market · Node ${{ matrix.node }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,3 +22,16 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm test
       - run: node rules/cli.js examples/site-example.json
+
+  bot:
+    name: bot · Python ${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -s bot/tests -v
