@@ -27,9 +27,10 @@ body:
       label: Area
       options:
         - Scan and score
-        - Token page (owner powers, liquidity, first buyers, pressure)
-        - Radar and Guard
-        - The open rules in this repository
+        - Token page (market, owner powers, liquidity, first buyers, Guard)
+        - Radar and Shield
+        - Telegram bot
+        - The open code in this repository
         - Something else
     validations:
       required: true

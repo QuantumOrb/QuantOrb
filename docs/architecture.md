@@ -1,7 +1,9 @@
 # How QuantumOrb fits together
 
-QuantumOrb is one server, one site and one Telegram bot. The server watches every new pump.fun launch,
-checks who made it, and runs scans on demand; the site and the bot read from it.
+QuantumOrb is one server, one site and one Telegram bot, [@QuantumORB_bot](https://t.me/QuantumORB_bot).
+The server watches every new pump.fun launch, checks who made it, and runs scans on demand; the site reads
+from it. The bot follows the same launches with the same Shield rule and sends what you asked for to
+your chat.
 
 ```mermaid
 flowchart LR
@@ -18,10 +20,12 @@ flowchart LR
     SH --> RD[Radar · the last 1,000 launches]
     Q[scan queue] --> RE[read the holders] --> LK[find the links]
     TP[token page] --> GD{Guard}
-    subgraph open[rules/ · open]
+    subgraph open[rules/ · chain/ · market/ · open]
       V[operators] --> SC[score · flags · caps · scenario]
       GC[Guard's checks]
       SHC[Shield's rule]
+      CR[pump.fun and Solana layouts]
+      MK[market figures]
     end
     LK --> V
     GD -.-> GC
@@ -37,8 +41,25 @@ flowchart LR
   MD --> TP
   SC --> W[quantumorb.app]
   RD --> W
-  SC --> B[Telegram bot · coming soon]
-  RD --> B
+  S -.-> CR
+  RE -.-> CR
+  TP -.-> MK
+  subgraph bot[Telegram bot · @QuantumORB_bot · closed]
+    BS[launches · curves · creators] --> BSH{Shield}
+    BSH --> AL[alerts · watch · follow · dev · token]
+    subgraph bopen[bot/ · open]
+      BM[messages]
+      BR[Shield's rule]
+      BC[curve reader]
+    end
+    AL -.-> BM
+    BSH -.-> BR
+    BS -.-> BC
+  end
+  PP --> BS
+  PR --> BS
+  MD --> AL
+  W -. your Radar filters .-> AL
 ```
 
 ## Two kinds of work, two kinds of data
@@ -80,11 +101,14 @@ takeover moved the creator fees elsewhere; the page then names the new fee recip
 
 | Open, in this repository | Closed |
 |---|---|
-| The score, operators, flags, caps and the sell scenario | Reading holders, entries and histories from the chain |
-| Guard's three checks and Shield's rule, with their thresholds | Finding links between wallets |
-| Every threshold the rules use | The launch stream, the Radar and the 1,000-launch grid |
-| Tests, and examples the server itself produced | The site, the API and the Telegram bot |
+| The score, operators, flags, caps and the sell scenario · [`rules/`](../rules) | Which accounts and transactions a scan reads, in what order, under what budget |
+| Guard's three checks and Shield's rule, with their thresholds · [`rules/`](../rules) | Holders' entries and histories, and finding links between wallets |
+| How pump.fun and Solana accounts are found and decoded, and a transaction reader · [`chain/`](../chain) | The launch stream, the Radar and the 1,000-launch grid |
+| A token page's market figures from pools that belong to the token · [`market/`](../market) | Fetching market data: requests, limits, caches and fallbacks |
+| Every message the bot sends about a token, Shield's rule and the bot's curve reader · [`bot/`](../bot) | The bot's commands, alert loops, launch stream and database |
+| Tests, and examples the server itself produced | The site, the API, the servers and every key and setting |
 
-The open part is exactly what decides a verdict, so anyone can check that a score follows the
-published rules. The closed part is what it takes to read the chain fast and cheaply enough to do it
-for every launch.
+The open part is exactly what decides a verdict and how the chain and the market are read, so anyone
+can check that a score follows the published rules and that a figure means what the page says. The
+closed part is what it takes to read the chain fast and cheaply enough to do it for every launch, and
+to run the service.

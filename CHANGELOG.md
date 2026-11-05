@@ -1,11 +1,31 @@
 # Changelog
 
+## 5 November 2026 · the full release
+
+- **The Telegram bot is open:** [@QuantumORB_bot](https://t.me/QuantumORB_bot). New launches that pass your
+  filters and Shield, tokens you watch, wallets you follow, devs who launch again, and any token on demand.
+  Free for everybody. The site links to it everywhere: the header, token pages (watch a token, follow its
+  dev or a wallet), the Radar (send your filters to the bot).
+- **The QuantumOrb token** on Solana. The only official contract:
+  `EiN69j8KVE5uYKheVkeVwptEVwRP5JtDhJDMGm1ppump`. Any other is not ours.
+- **A roadmap** at the bottom of the home page and in the [README](README.md#roadmap): nine steps done,
+  six new languages next, then the scanner in Telegram and more.
+- **More code is open**, each file the server's or the bot's own:
+  - [`chain/`](chain): how the server reads pump.fun and Solana (program ids, derived addresses, the
+    bonding curve, PumpSwap, Raydium CPMM and Metaplex layouts, Token-2022, a transaction reader);
+  - [`market/`](market): a token page's market figures, from pools checked to belong to the token;
+  - [`bot/`](bot): every message the bot sends about a token, Shield's rule and the bot's curve reader,
+    in Python.
+- Tests for all of it: the chain reader in both languages on 34 real pump.fun mints, the market figures on
+  real market data, the bot's messages and Shield. CI runs them on Node 18, 20 and 22 and Python 3.11-3.13.
+- New screens of the site and the bot, without anything hidden.
+
 ## 3 November 2026 · the site is public
 
 - QuantumOrb is live at **[quantumorb.app](https://quantumorb.app)**: the holder scanner, the Radar with
   Shield on every launch, and token pages with Guard. Every rule is on
   [quantumorb.app/#how](https://quantumorb.app/#how).
-- The Telegram bot follows later; its link will be published here and on the site when it opens.
+- The Telegram bot followed on 5 November.
 
 ## 1 November 2026 · the repository follows the new site and bot
 
@@ -54,7 +74,7 @@
 ## 22 October 2026 · the repository starts over
 
 - This repository is now the public page of the new QuantumOrb: the holder scanner, the Radar, Guard and
-  the Telegram bot (coming soon).
+  the Telegram bot (then still in testing).
 - **The rules are open.** [`rules/`](rules) holds the code that turns a scan into a verdict: the score,
   operators, red flags, caps, the sell scenario and Guard's three checks, with tests and example tokens.
   The examples carry the results the server itself produced, and `npm test` checks the open code against

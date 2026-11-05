@@ -29,7 +29,8 @@ shield({ creator: { launched: 2500, graduated: 4 }, devAtLaunch: 1e6 });
 // { pass: false, reason: 'serial creator: 2500 launches, 4 graduated', checks: [ … ] }
 ```
 
-The Telegram bot uses the same rule, on the same data, before every alert.
+The Telegram bot, [@QuantumORB_bot](https://t.me/QuantumORB_bot), uses the same rule, on the same data,
+before every alert. Its own copy, in Python, is open too: [`bot/shield.py`](../bot/shield.py).
 
 ## Guard · token pages and scans
 

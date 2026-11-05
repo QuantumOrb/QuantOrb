@@ -1,9 +1,17 @@
 # Security
 
 QuantumOrb never asks anyone for a private key, a seed phrase or funds - not on the site, not in the
-bot, not in a message. Anything that does is not QuantumOrb. The only official site is
-[quantumorb.app](https://quantumorb.app). The Telegram bot is not public yet: its link will be published
-here and on the site when it opens, and any "QuantumOrb bot" before that is not ours.
+bot, not in a message. Anything that does is not QuantumOrb.
+
+The official links are only these:
+
+| | |
+|---|---|
+| Site | [quantumorb.app](https://quantumorb.app) |
+| Telegram bot | [@QuantumORB_bot](https://t.me/QuantumORB_bot) |
+| Token contract (Solana) | `EiN69j8KVE5uYKheVkeVwptEVwRP5JtDhJDMGm1ppump` |
+
+Any other site, bot or contract that calls itself QuantumOrb is not ours.
 
 ## Reporting a vulnerability
 
